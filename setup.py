@@ -6,14 +6,13 @@ with open('README.md') as f:
 setup(
   name = 'pyiptmnet',
   packages = ['pyiptmnet'], # this must be the same as the name above
-  version = '0.1.7',
+  version = '0.2.0',
   description = 'Python client for iPTMNet REST API - https://research.bioinformatics.udel.edu/iptmnet/',
   long_description = long_description,
   long_description_content_type="text/markdown",
-  author = 'Sachn Gavali',
-  author_email = 'saching@udel.edu',
-  url = 'https://github.com/udel-cbcb/pyiptmnet', # use the URL to the github repo
-  download_url = 'https://github.com/udel-cbcb/pyiptmnet/archive/0.1.7.tar.gz',
+  author = 'Sachn Gavali & Roman Fitzjalen',
+  author_email = 'saching@udel.edu & romaactor@gmail.com',
+  url = 'https://github.com/fitzjalen/pyiPTMnet', # use the URL to the github repo
   keywords = ['iPTMnet', 'API', 'Client', 'REST-API'], # arbitrary keywords
   classifiers = [],
   install_requires=[

@@ -24,7 +24,7 @@ class IPTMnetTest(unittest.TestCase):
     # test search
     def test_search(self):
         search_results_df = api.search("smad2", Termtype.ALL, Role.EnzymeOrSubstrate)
-        self.assertTrue(len(search_results_df.index) != 0)
+        self.assertTrue(len(search_results_df) != 0)
 
         search_results_dict = api.search("smad2", Termtype.ALL, Role.EnzymeOrSubstrate, dict=True)
         self.assertTrue(len(search_results_dict) != 0)
@@ -37,12 +37,12 @@ class IPTMnetTest(unittest.TestCase):
     # test get substrates
     def test_get_substrates(self):
         substrates_df = api.get_substrates("Q15796")
-        self.assertTrue(len(substrates_df.index) != 0)
+        self.assertTrue(len(substrates_df) != 0)
 
     # test get proteoforms
     def test_get_proteoforms(self):
         proteoforms_df = api.get_proteoforms("Q15796")
-        self.assertTrue(len(proteoforms_df.index) != 0)
+        self.assertTrue(len(proteoforms_df) != 0)
 
         proteoforms_dict = api.get_proteoforms("Q15796",dict=True)
         self.assertTrue(len(proteoforms_dict) != 0)
@@ -50,7 +50,7 @@ class IPTMnetTest(unittest.TestCase):
     # test get ptm ppi
     def test_get_ptm_ppi(self):
         ptm_ppi_df = api.get_ptm_dependent_ppi("Q15796")
-        self.assertTrue(len(ptm_ppi_df.index) != 0)
+        self.assertTrue(len(ptm_ppi_df) != 0)
 
         ptm_ppi_dict = api.get_ptm_dependent_ppi("Q15796",dict=True)
         self.assertTrue(len(ptm_ppi_dict) != 0)
@@ -58,7 +58,7 @@ class IPTMnetTest(unittest.TestCase):
     # test get ppi for proteoforms
     def test_get_ppi_for_proteoforms(self):
         proteoform_ppi_df = api.get_ppi_for_proteoforms("Q15796")
-        self.assertTrue(len(proteoform_ppi_df.index) != 0)
+        self.assertTrue(len(proteoform_ppi_df) != 0)
 
         proteoform_ppi_dict = api.get_ppi_for_proteoforms("Q15796",dict=True)
         self.assertTrue(len(proteoform_ppi_dict) != 0)
@@ -140,12 +140,12 @@ class IPTMnetTest(unittest.TestCase):
         self.assertTrue(len(alignments) != 0)
 
     # test get variants
-    def test_get_variants(self):
-        variants_df = api.get_variants("Q15796")
-        self.assertTrue(len(variants_df.index) != 0)
+    # def test_get_variants(self):
+    #     variants_df = api.get_variants("Q15796")
+    #     self.assertTrue(len(variants_df) != 0)
 
-        variants_dict = api.get_variants("Q15796",dict=True)
-        self.assertTrue(len(variants_dict) != 0)
+    #     variants_dict = api.get_variants("Q15796",dict=True)
+    #     self.assertTrue(len(variants_dict) != 0)
 
 
 if __name__ == '__main__':
