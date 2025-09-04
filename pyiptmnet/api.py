@@ -7,7 +7,7 @@ import pandas as pd
 import urllib3
 from pyiptmnet.enums import API_VERSION
 
-__host_url = "https://research.bioinformatics.udel.edu/iptmnet/api"
+__host_url = "https://research.bioinformatics.udel.edu/iptmnet/api/v1"
 urllib3.disable_warnings()
 __selected_version = None
 

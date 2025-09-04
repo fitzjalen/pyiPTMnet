@@ -6,7 +6,7 @@ with open('README.md') as f:
 setup(
   name = 'pyiptmnet',
   packages = ['pyiptmnet'], # this must be the same as the name above
-  version = '0.2.0',
+  version = '0.2.1',
   description = 'Python client for iPTMNet REST API - https://research.bioinformatics.udel.edu/iptmnet/',
   long_description = long_description,
   long_description_content_type="text/markdown",
